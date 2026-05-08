@@ -32,3 +32,60 @@ int main()
     obj1.setter("Hitesh",25);
     cout<<obj1.getter();
 }
+****************************************************************************************************************************************************************
+
+
+
+Que : Code of copy constructor
+
+
+#include <iostream>
+using namespace std;
+
+// Copy Constructor Example
+
+class Student {
+    string name;
+    int age;
+    int roll_no;
+
+public:
+    // Parameterized Constructor
+    Student(string n, int a, int r) {
+        name = n;
+        age = a;
+        roll_no = r;
+    }
+
+    // Copy Constructor
+    Student(Student &a) {
+        name = a.name;
+        age = a.age;
+        roll_no = a.roll_no;
+    }
+
+    // Display Function
+    void display() {
+        cout << "Name: " << name << endl;
+        cout << "Age: " << age << endl;
+        cout << "Roll No: " << roll_no << endl;
+    }
+};
+
+int main() {
+
+    // First Object
+    Student obj1("Hitesh", 25, 1);
+
+    // Copying obj1 into obj2
+    Student obj2(obj1);
+
+    cout << "Object 1:" << endl;
+    obj1.display();
+
+    cout << "\nObject 2:" << endl;
+    obj2.display();
+
+    return 0;
+}
+
