@@ -130,49 +130,35 @@ int main()
 *******************************************************************************************************************************************************************
 Que: code of function overloading
 
-
 #include <iostream>
 using namespace std;
-
-class Human 
+//Function overloading
+class Student
 {
-protected:
-    string name;
-};
-
-class Person
-{
-protected:
-    int age;
-};
-
-class Student : public Human, public Person
-{
-    int roll_no;
-
-public:
-    Student(string n, int a, int r)
+    int length;
+    int breadth;
+    
+    public:
+    int area(int l,int r)
     {
-        name = n;
-        age = a;
-        roll_no = r;
+        return(l*r);
     }
-
-    void display()
+    int area(int side)
     {
-        cout << "Name     : " << name << endl;
-        cout << "Age      : " << age << endl;
-        cout << "Roll No  : " << roll_no << endl;
+        return(side*side);
     }
+    
 };
-
 int main()
 {
-    Student obj("Hitesh", 25, 1);
+    Student obj;
+    cout<<"Area of Rectangle is:"<<obj.area(3,4)<<endl;
+    cout<<"Area of square is:"<<obj.area(4)<<endl;
+}
+   
 
-    obj.display();
 
-    return 0;
+
 }
 
 
