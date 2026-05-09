@@ -92,6 +92,41 @@ int main() {
 
 ********************************************************************************************************************************************************************
 
+Que:code of multiple inheritance
+
+#include <iostream>
+using namespace std;
+
+
+class Human 
+{
+    protected:
+    string name;
+};
+class Person
+{
+    protected:
+    int age;
+};
+class Student:public Human,public Person
+{
+    int roll_no;
+    public:
+    Student(string n,int a,int r)
+    {
+        name=n;
+        age=a;
+        roll_no=r;
+    }
+};
+int main()
+{
+    Student obj"(Hitesh",25,01);
+    return 0;
+
+}
+
+    
 
 
 
