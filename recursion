@@ -1,0 +1,32 @@
+Que : table of 2 , n times
+
+#include <iostream>
+using namespace std;
+
+void printTable(int n)
+{
+    // Base condition
+    if(n == 0)
+        return;
+
+    cout << "2 x " << n << " = " << 2 * n << endl;
+
+    // Recursive call
+    printTable(n - 1);
+}
+
+int main()
+{
+    int n;
+
+    cout << "Enter number of times: ";
+    cin >> n;
+
+    printTable(n);
+
+    return 0;
+}
+*********************************************************************************************************************************************************************
+
+
+
